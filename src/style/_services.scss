@@ -1,0 +1,17 @@
+.services {
+  padding: 25px 0;
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
+  &__category {
+    flex: 0 0 180px;
+  }
+
+  &__list {
+    flex: 1 1 100%;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

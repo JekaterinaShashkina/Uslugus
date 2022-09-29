@@ -1,0 +1,30 @@
+.header {
+  padding: 26px 0 25px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 88px;
+  }
+  &__search {
+    margin-right: auto;
+  }
+
+  &__auth {
+    display: flex;
+    gap: 40px;
+  }
+  &__auth-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #e5c207;
+    }
+    &:active {
+      color: #ffd600;
+    }
+  }
+}

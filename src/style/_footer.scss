@@ -1,0 +1,26 @@
+.footer {
+  padding: 35px 0 55px;
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "logo . ."
+      ". . design"
+      "copyright . tag";
+  }
+  &__logo {
+    grid-area: logo;
+    margin-bottom: 14px;
+  }
+  &__copyright {
+    grid-area: copyright;
+  }
+  &__design {
+    grid-area: design;
+    text-align: right;
+    margin-bottom: 7px;
+  }
+  &__tag {
+    grid-area: tag;
+    text-align: right;
+  }
+}
