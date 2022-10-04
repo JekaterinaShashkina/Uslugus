@@ -90,4 +90,12 @@
       margin-left: auto;
     }
   }
+  &__wrapper_rating {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+  }
+  &__rating {
+    align-self: center;
+  }
 }
