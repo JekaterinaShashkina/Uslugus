@@ -1,0 +1,62 @@
+.review {
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    gap: 8px;
+    min-height: 95px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  &__stars {
+    justify-self: end;
+  }
+  &__text {
+    font-weight: 300;
+    grid-column: span 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 19px;
+    height: calc(19px * 2);
+    &_open {
+      display: block;
+      height: unset;
+    }
+  }
+  &__open {
+    position: relative;
+    justify-self: start;
+    font-size: 14px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: $text;
+      bottom: 2px;
+    }
+  }
+  &__open_list {
+    display: block;
+    margin-left: auto;
+  }
+}

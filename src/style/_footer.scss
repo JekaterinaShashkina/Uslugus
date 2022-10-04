@@ -3,9 +3,12 @@
   &__container {
     display: grid;
     grid-template-areas:
-      "logo . ."
-      ". . design"
-      "copyright . tag";
+      "logo ."
+      "copyright contact";
+    gap: 14px;
+    // "logo . ."
+    // ". . design"
+    // "copyright . tag";
   }
   &__logo {
     grid-area: logo;
@@ -13,14 +16,19 @@
   }
   &__copyright {
     grid-area: copyright;
+    align-self: end;
+  }
+  &__contact {
+    grid-area: contact;
+    justify-self: end;
   }
   &__design {
-    grid-area: design;
-    text-align: right;
+    // grid-area: design;
+    // text-align: right;
     margin-bottom: 7px;
   }
-  &__tag {
-    grid-area: tag;
-    text-align: right;
-  }
+  // &__tag {
+  //   grid-area: tag;
+  //   text-align: right;
+  // }
 }

@@ -1,0 +1,93 @@
+.form {
+  &__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 12px;
+    &_user,
+    &_service {
+      margin-bottom: 46px;
+    }
+    &_password {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__label {
+    flex: 1 1 310px;
+  }
+
+  &__text {
+    display: block;
+    display: block;
+    font-weight: 300;
+  }
+  &__input {
+    width: 100%;
+    height: 46px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+    font-weight: 300;
+  }
+  &__select {
+    width: 100%;
+    height: 46px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+  }
+  &__select_price {
+    width: 105px;
+  }
+  &__wrapper-price {
+    display: flex;
+    gap: 5px;
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 80px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+  }
+
+  &__password {
+    position: relative;
+  }
+  &__password-eye {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    background-image: url("img/eyeSlash.svg");
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    &_show {
+      background-image: url("img/eye.svg");
+    }
+  }
+  &__wrapper-btn {
+    min-height: 114px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__submit {
+    display: block;
+    padding: 10px 20px;
+    font-weight: 400;
+    background-color: #ffd600;
+    border-radius: 4px;
+
+    &_sign-up {
+      align-self: flex-end;
+    }
+    &_sign-in {
+      margin-left: auto;
+    }
+  }
+}
