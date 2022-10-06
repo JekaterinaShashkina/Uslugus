@@ -1,5 +1,12 @@
 .footer {
-  padding: 35px 0 55px;
+  padding: 55px 0;
+
+  @include tablet {
+    padding-bottom: 30px;
+  }
+  @include mobile {
+    padding-bottom: 14px;
+  }
   &__container {
     display: grid;
     grid-template-areas:
@@ -9,10 +16,22 @@
     // "logo . ."
     // ". . design"
     // "copyright . tag";
+
+    @include mobile {
+      grid-template-areas:
+        "logo"
+        "contact"
+        "copyright";
+      gap: 0;
+    }
   }
   &__logo {
     grid-area: logo;
     margin-bottom: 14px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
   }
   &__copyright {
     grid-area: copyright;
@@ -21,6 +40,11 @@
   &__contact {
     grid-area: contact;
     justify-self: end;
+
+    @include mobile {
+      justify-self: start;
+      margin-bottom: 33px;
+    }
   }
   &__design {
     // grid-area: design;

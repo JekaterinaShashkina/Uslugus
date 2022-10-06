@@ -1,11 +1,23 @@
 .person {
   &__service {
     margin-bottom: 32px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
   &__about {
     margin-bottom: 32px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
   &__review {
     margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
   }
 }

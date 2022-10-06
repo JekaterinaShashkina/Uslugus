@@ -4,8 +4,17 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 24px;
+    width: 180px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
   &__list {
+    @include tablet {
+      padding-top: 24px;
+      display: none;
+    }
   }
   &__item {
     margin-bottom: 10px;

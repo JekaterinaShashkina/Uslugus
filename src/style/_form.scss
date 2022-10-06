@@ -3,6 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px 12px;
+
+    @include mobile {
+      gap: 8px;
+    }
     &_user,
     &_service {
       margin-bottom: 46px;
@@ -10,10 +14,20 @@
     &_password {
       margin-bottom: 36px;
     }
+    &_add-review {
+      margin-bottom: 32px;
+    }
+    &_sign-in {
+      margin-bottom: 32px;
+    }
   }
 
   &__label {
     flex: 1 1 310px;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__text {
@@ -21,6 +35,10 @@
     display: block;
     font-weight: 300;
   }
+  // &__option {
+  //   font-weight: 300;
+  //   color: #c0c0c0;
+  // }
   &__input {
     width: 100%;
     height: 46px;
@@ -37,6 +55,8 @@
     border-radius: 8px;
     border: none;
     padding: 10px 14px;
+    font-weight: 300;
+    color: #c0c0c0;
   }
   &__select_price {
     width: 105px;
@@ -75,6 +95,11 @@
     min-height: 114px;
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 32px;
+    }
   }
   &__submit {
     display: block;
@@ -82,6 +107,9 @@
     font-weight: 400;
     background-color: #ffd600;
     border-radius: 4px;
+    @include mobile {
+      font-size: 14px;
+    }
 
     &_sign-up {
       align-self: flex-end;
@@ -90,12 +118,21 @@
       margin-left: auto;
     }
   }
-  &__wrapper_rating {
+  &__wrapper-send-review {
     display: flex;
+    align-items: center;
     gap: 24px;
     justify-content: flex-end;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+    }
   }
   &__rating {
-    align-self: center;
+    @include tablet {
+      order: 1;
+    }
   }
 }

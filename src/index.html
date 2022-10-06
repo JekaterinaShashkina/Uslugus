@@ -338,7 +338,7 @@
     </footer>
 
     <div class="modal modal__person">
-      <div class="modal__body">
+      <div class="modal__body modal__body_person">
         <div class="modal__container person">
           <div class="person__service service service_person">
             <img class="service__avatar" src="img/Ivan.png" alt="аватар Иван" />
@@ -474,7 +474,7 @@
           </div>
 
           <form class="person__form form form_add-review">
-            <fieldset class="form__fieldset form__fieldset_user">
+            <fieldset class="form__fieldset form__fieldset_add-review">
               <label class="form__label">
                 <span class="form__text">Имя</span>
                 <input class="form__input" />
@@ -488,8 +488,8 @@
                 <textarea class="form__textarea"></textarea>
               </label>
             </fieldset>
-            <div class="form__wrapper_rating">
-              <div class="form__rating">
+            <div class="form__wrapper-send-review">
+              <div class="form__rating rating">
                 <svg
                   class="rating__star"
                   width="18"
@@ -647,7 +647,12 @@
                   <option value="exactly" class="form__option">равно</option>
                   <option value="up to" class="form__option">до</option>
                 </select>
-                <input type="number" id="price" class="form__input" />
+                <input
+                  type="number"
+                  id="price"
+                  class="form__input"
+                  placeholder="стоимость услуги"
+                />
               </div>
             </div>
 
@@ -735,10 +740,10 @@
     </div>
 
     <div class="modal modal__sign-in">
-      <div class="modal__body">
+      <div class="modal__body modal__body_sign-in">
         <h3 class="modal__title">Вход в систему</h3>
         <form class="form form_sign-in">
-          <fieldset class="form__fieldset form__fieldset_user">
+          <fieldset class="form__fieldset form__fieldset_sign-in">
             <label class="form__label">
               <span class="form__text">E-mail</span>
               <input type="email" class="form__input" />

@@ -5,9 +5,18 @@
   display: grid;
   grid-template-areas:
     "avatar present price"
-    "contacs contacts review";
+    "contacts contacts review";
   grid-template-columns: 50px 1fr max-content;
   gap: 20px 24px;
+
+  @include mobile {
+    grid-template-areas:
+      "avatar . price"
+      "present present review"
+      "contacts contacts contacts";
+    padding: 16px;
+    gap: 8px;
+  }
   &_person {
     gap: 40px 14px;
   }
@@ -22,13 +31,24 @@
     grid-area: price;
     font-size: 24px;
     text-align: right;
+
+    @include mobile {
+      font-size: 18px;
+      padding-top: 8px;
+      padding-right: 8px;
+    }
   }
   &__contacts {
-    grid-column: span 2;
+    grid-area: contacts;
     align-self: end;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    font-weight: 300;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
   &__link {
     position: relative;
@@ -58,18 +78,39 @@
     justify-content: flex-end;
     align-items: flex-end;
     gap: 16px;
+
+    @include mobile {
+      gap: 8px;
+    }
   }
   &__title {
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 400;
+
+    @include mobile {
+      margin-bottom: 17px;
+      font-size: 18px;
+    }
   }
   &__name {
     font-weight: 300;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__count-review {
     padding-left: 18px;
     background: url("img/icon-comment.svg") left/14px no-repeat;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__stars {
+    line-height: 0;
   }
 }

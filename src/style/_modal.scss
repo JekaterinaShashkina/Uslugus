@@ -7,15 +7,27 @@
   cursor: pointer;
   background-color: rgba(#000000, 0.6);
 
+  @include tablet {
+    padding: 20px;
+  }
+
+  @include mini {
+    padding: 0;
+  }
+
   &__title {
     font-weight: 400;
     font-size: 24px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
-  &__person {
+  &__sign-up {
     display: flex;
   }
 
@@ -28,6 +40,21 @@
     background-color: #f2f5fc;
     border-radius: 12px;
     padding: 24px 20px 48px;
+
+    @include mobile {
+      padding-bottom: 27px;
+    }
+    &_sign-in {
+      @include mobile {
+        padding-bottom: 32px;
+      }
+    }
+    &_person {
+      @include mobile {
+        padding-top: 20px;
+        padding-bottom: 23px;
+      }
+    }
   }
 
   &__container {
@@ -48,9 +75,15 @@
     align-items: center;
     justify-content: center;
     color: #7b7b7b;
+    z-index: 10;
 
     &:hover {
       color: #000000;
+    }
+
+    @include mini {
+      transform: none;
+      box-shadow: 0 0 10px #ccc;
     }
   }
 }
