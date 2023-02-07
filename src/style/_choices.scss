@@ -1,0 +1,36 @@
+@import "~choices.js/public/assets/styles/choices.min.css";
+
+.choices {
+  position: relative;
+  z-index: 333;
+}
+
+.choices__inner {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  border: none;
+}
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 0;
+}
+.choices[data-type*="select-one"]::after {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-top: -10px;
+  background-image: url("img/down.svg");
+  top: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+.choices[data-type*="select-one"].is-open::after {
+  transform: rotate(180deg);
+}

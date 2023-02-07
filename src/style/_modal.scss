@@ -6,6 +6,7 @@
   overflow-y: auto;
   cursor: pointer;
   background-color: rgba(#000000, 0.6);
+  z-index: 999;
 
   @include tablet {
     padding: 20px;
@@ -28,7 +29,7 @@
   }
 
   &__sign-up {
-    display: flex;
+    display: none;
   }
 
   &__body {

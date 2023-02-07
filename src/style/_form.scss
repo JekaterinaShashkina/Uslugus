@@ -32,7 +32,6 @@
 
   &__text {
     display: block;
-    display: block;
     font-weight: 300;
   }
   // &__option {
@@ -59,7 +58,7 @@
     color: #c0c0c0;
   }
   &__select_price {
-    width: 105px;
+    min-width: 105px;
   }
   &__wrapper-price {
     display: flex;
@@ -87,6 +86,7 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+
     &_show {
       background-image: url("img/eye.svg");
     }
