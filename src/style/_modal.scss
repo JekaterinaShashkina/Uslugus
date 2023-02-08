@@ -45,6 +45,10 @@
     @include mobile {
       padding-bottom: 27px;
     }
+    @include mini {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     &_sign-in {
       @include mobile {
         padding-bottom: 32px;
