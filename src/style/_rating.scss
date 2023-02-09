@@ -1,0 +1,25 @@
+.rating {
+  display: flex;
+  gap: 2px;
+  color: transparent;
+  color: #ffd600;
+
+  &:hover .rating__star {
+    color: #ffd600 !important;
+  }
+  &__star {
+    cursor: pointer;
+
+    &:hover ~ .rating__star {
+      color: transparent !important;
+    }
+  }
+
+  &[data-stars="1"] .rating__star:nth-child(1) ~ .rating__star,
+  &[data-stars="2"] .rating__star:nth-child(2) ~ .rating__star,
+  &[data-stars="3"] .rating__star:nth-child(3) ~ .rating__star,
+  &[data-stars="4"] .rating__star:nth-child(4) ~ .rating__star,
+  &[data-stars="5"] .rating__star:nth-child(5) ~ .rating__star {
+    color: transparent;
+  }
+}

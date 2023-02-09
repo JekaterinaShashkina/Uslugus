@@ -509,13 +509,14 @@
               </label>
             </fieldset>
             <div class="form__wrapper-send-review">
-              <div class="form__rating rating">
+              <div class="form__rating rating" data-stars="3">
                 <svg
                   class="rating__star"
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
+                  fill="currentColor"
+                  data-rating="1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -528,7 +529,8 @@
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
+                  fill="currentColor"
+                  data-rating="2"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -541,7 +543,8 @@
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
+                  fill="currentColor"
+                  data-rating="3"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -554,7 +557,8 @@
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
+                  fill="currentColor"
+                  data-rating="4"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -567,7 +571,8 @@
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
+                  fill="currentColor"
+                  data-rating="5"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -575,6 +580,7 @@
                     stroke="#FFD600"
                   />
                 </svg>
+                <input type="hidden" name="rating" class="rating__input" />
               </div>
 
               <button class="form__submit">Опубликовать отзыв</button>
