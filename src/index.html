@@ -101,6 +101,17 @@
             <span>Регистрация</span>
           </button>
         </div>
+
+        <div class="header__sign-in">
+          <!-- <img src="./img/smallAva.png" alt="" class="header__user_avatar" />
+
+          <div class="header__user_data">
+            <span class="header__user_name">Павел</span>
+            <span class="header__user_category">Фотограф</span>
+        </div>
+     
+          <button class="header__changestatus">Изменить услугу</button> -->
+        
       </div>
     </header>
     <main>
@@ -128,7 +139,7 @@
             </button>
 
             <ul class="category__list">
-              <li class="category__item">
+              <!-- <li class="category__item">
                 <button
                   class="category__btn category__btn_photographer"
                   data-value="photographer"
@@ -191,7 +202,7 @@
                 >
                   Сантехник
                 </button>
-              </li>
+              </li> -->
             </ul>
           </div>
           <ul class="services__list">
@@ -622,26 +633,29 @@
           <fieldset class="form__fieldset form__fieldset_user">
             <label class="form__label">
               <span class="form__text">Имя</span>
-              <input type="text" class="form__input" />
+              <input type="text" class="form__input" name="name" />
             </label>
             <label class="form__label">
               <span class="form__text">Фамилия</span>
-              <input type="text" class="form__input" />
+              <input type="text" class="form__input" name="surname" />
             </label>
             <label class="form__label">
               <span class="form__text">Телефон</span>
-              <input type="text" class="form__input" />
+              <input type="text" class="form__input" name="phone" />
             </label>
             <label class="form__label">
               <span class="form__text">E-mail</span>
-              <input type="email" class="form__input" />
+              <input type="email" class="form__input" name="email" />
             </label>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset_service">
             <label class="form__label">
               <span class="form__text">Категория</span>
-              <select class="form__select form__select_category">
+              <select
+                class="form__select form__select_category"
+                name="category"
+              >
                 <option value="" class="form__option">
                   Выберите категорию
                 </option>
@@ -668,7 +682,10 @@
             <div class="form__label">
               <label class="form__text" for="price">Цена</label>
               <div class="form__wrapper-price">
-                <select class="form__select form__select_price">
+                <select
+                  class="form__select form__select_price"
+                  name="direction"
+                >
                   <option value="from" class="form__option">от</option>
                   <option value="exactly" class="form__option">равно</option>
                   <option value="up to" class="form__option">до</option>
@@ -678,13 +695,14 @@
                   id="price"
                   class="form__input"
                   placeholder="стоимость услуги"
+                  name="price"
                 />
               </div>
             </div>
 
             <label class="form__label">
               <span class="form__text">Описание услуг</span>
-              <textarea class="form__textarea"></textarea>
+              <textarea class="form__textarea" name="about"></textarea>
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset_password">
@@ -695,6 +713,7 @@
                   type="password"
                   class="form__input form__input_password"
                   id="password"
+                  name="password"
                 />
                 <button
                   type="button"
@@ -712,6 +731,7 @@
                   type="password"
                   class="form__input form__input_password"
                   id="password-repeat"
+                  name="password"
                 />
                 <button
                   type="button"
@@ -772,11 +792,11 @@
     <div class="modal modal__sign-in">
       <div class="modal__body modal__body_sign-in">
         <h3 class="modal__title">Вход в систему</h3>
-        <form class="form form_sign-in">
+        <form class="form form__sign-in">
           <fieldset class="form__fieldset form__fieldset_sign-in">
             <label class="form__label">
               <span class="form__text">E-mail</span>
-              <input type="email" class="form__input" />
+              <input type="email" class="form__input" name="email" />
             </label>
 
             <div class="form__label">
@@ -786,6 +806,7 @@
                   type="password"
                   class="form__input form__input_password"
                   id="password"
+                  name="password"
                 />
                 <button
                   type="button"
