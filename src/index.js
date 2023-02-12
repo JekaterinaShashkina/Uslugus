@@ -11,10 +11,12 @@ import { searchControl } from "./modules/searchContol";
 import { ratingController } from "./modules/ratingController";
 import { signInController, signUpController } from "./modules/sign";
 import { getData } from "./modules/getData";
-import { renderModal } from "./modules/renderPerson";
-import { auth } from "./modules/auth";
+import { renderPerson } from "./modules/renderPerson";
 
-const init = () => {
+const init = async () => {
+  await getCategory();
+  renderList();
+
   const eventModalSignIn = modalController({
     modal: ".modal__sign-in",
     btnOpen: ".header__auth-btn_sign-in",
@@ -39,8 +41,7 @@ const init = () => {
       const data = await getData(
         `${API_URL}/api/service/${handler.dataset.id}`
       );
-      renderModal(data);
-      console.log(data);
+      renderPerson(modalElem, data);
 
       modalElem.append();
 
@@ -76,10 +77,8 @@ const init = () => {
   showPassword();
   choicesController();
 
-  getCategory();
-  renderList();
   searchControl();
-  ratingController();
+  // ratingController();
 
   signUpController(eventModalSignUp.closeModal);
   signInController(eventModalSignIn.closeModal);

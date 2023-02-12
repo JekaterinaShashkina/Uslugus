@@ -26,6 +26,16 @@
     background-color: #ffffff;
     border-radius: 8px;
     padding: 14px;
+
+    &:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  &__show-all {
+    .review__item {
+      display: grid;
+    }
   }
   &__name {
     font-weight: 400;
